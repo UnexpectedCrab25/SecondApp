@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#1e056e">
+    android:background="#1e056e"
+    android:id="@+id/main"
+    >
 
     <TextView
         android:id="@+id/Tleft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="names john"
+        android:text="@string/names_john"
         android:background="#0b5787"
         android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,14 +22,16 @@
         android:width="100dp"
         android:height="100dp"
         android:gravity="center"
+        android:onClick="getBigger"
         />
+
 
     <TextView
         android:id="@+id/Tright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="bames nond"
+        android:text="@string/bames_nond"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/white"
@@ -35,6 +39,7 @@
         android:gravity="center"
         android:width="100dp"
         android:height="100dp"
+        android:onClick="getBigger"
         />
     <Button
         android:id="@+id/Bleft"
@@ -45,7 +50,11 @@
         android:background="#0b2887"
         android:width="100dp"
         android:height="100dp"
-        android:text="0"
+        android:text="@string/_0"
+        android:onClick="getBigger"
+
+
+
         />
     <Button
         android:id="@+id/Bright"
@@ -56,7 +65,9 @@
         android:background="#0b2887"
         android:width="100dp"
         android:height="100dp"
-        android:text="0"
+        android:text="@string/_0"
+        android:onClick="getBigger"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SecondApp</string>
+    <string name="reset">Reset</string>
+    <string name="_0">0</string>
+    <string name="bames_nond">bames nond</string>
+    <string name="names_john">names john</string>
 </resources>
