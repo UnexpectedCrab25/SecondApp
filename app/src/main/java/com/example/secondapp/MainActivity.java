@@ -29,11 +29,7 @@ Button button2;
         text2 = findViewById(R.id.Tright);
         button1 = findViewById(R.id.Bleft);
         button2 = findViewById(R.id.Bright);
-        editor.putString("INITIAL" + text1.getId(),text1.getText().toString());
-        editor.putString("INITIAL" + text2.getId(),text2.getText().toString());
-        editor.putString("INITIAL" + button1.getId(),button1.getText().toString());
-        editor.putString("INITIAL" + button2.getId(),button2.getText().toString());
-        editor.apply();
+
         longClickListener = new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -71,15 +67,15 @@ Button button2;
         editor.apply();
     }
     public void Reset(View view){
-
-        text1.setText(shared.getString("INITIAL" + text1.getId(),"no"));
-        text2.setText(shared.getString("INITIAL" + text2.getId(),"no"));
-        button1.setText(shared.getString("INITIAL" + button1.getId(),"no"));
-        button2.setText(shared.getString("INITIAL" + button2.getId(),"no"));
-        editor.putString("NumClicks" + text1.getId(),text1.getText().toString());
-        editor.putString("NumClicks" + text2.getId(),text2.getText().toString());
-        editor.putString("NumClicks" + button1.getId(),button1.getText().toString());
-        editor.putString("NumClicks" + button2.getId(),button2.getText().toString());
+        editor.clear();
+        text1.setText("0");
+        text2.setText("0");
+        button1.setText("0");
+        button2.setText("0");
+        editor.putString("NumClicks" + text1.getId(),"0");
+        editor.putString("NumClicks" + text2.getId(),"0");
+        editor.putString("NumClicks" + button1.getId(),"0");
+        editor.putString("NumClicks" + button2.getId(),"0");
         editor.apply();
 
     }
